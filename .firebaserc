@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "dev": "dev-ion4fullpwa",
+    "pro": "pro-ion4fullpwa"
+  },
+  "targets": {
+    "dev-ion4fullpwa": {
+      "hosting": {
+        "02-2023-release": [
+          "dev-ionic-6-full-app"
+        ]
+      }
+    },
+    "pro-ion4fullpwa": {
+      "hosting": {
+        "02-2023-release": [
+          "pro-ionic-6-full-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
