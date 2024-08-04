@@ -67,7 +67,8 @@ export class FirebasemanualesComponent implements OnInit {
 
     this.webnotification();
 
-    // this.simplefirebasequery2();
+    this.simplefirebasequery2();
+    //this.firebaseshowlist();
   }
 
   webnotification() {
