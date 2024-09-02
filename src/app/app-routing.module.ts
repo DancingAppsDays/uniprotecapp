@@ -1,16 +1,47 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ManualesPageComponent } from './manuales/manuales.page/manuales.page.component';
+import { CursoscategoriesComponent } from './cursos/cursoscategories/cursoscategories.component';
+import { BrowserswipeComponent } from './browserswipe/browserswipe.component';
+import { CursoslistComponent } from './cursos/cursoslist/cursoslist.component';
+import { CursovidsComponent } from './cursos/cursovids/cursovids.component';
 
 const routes: Routes = [
 
+  {
+    path: 'asdf',
+    redirectTo: '/walkthrough',
+    pathMatch: 'full'
+  },
+  {
+    path: '0',
+    component: CursoslistComponent
+    // component: BrowserswipeComponent
+  },
+  {
+    path: '1',
+    component: CursoscategoriesComponent
+    // component: BrowserswipeComponent
+  },
+  {
+    path: '2',
+
+    component: BrowserswipeComponent
+  },
+  {
+    path: '',
+
+    component: CursovidsComponent
+  },
+
+  /*{
 
   {
     path: '',
     redirectTo: '/walkthrough',
     pathMatch: 'full'
   },
-  /*{
+
     //path: 'manuales',
     //loadChildren: () => import('./app.module').then(m => m.manualesPageComponent)
     //component: ManualesPageComponent

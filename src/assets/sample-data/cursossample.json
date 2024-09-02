@@ -1,0 +1,31 @@
+{
+    "cursos": [
+        {
+            "id": 1,
+            "slug": "4-guests-2-bedrooms-powell-street-san-francisco",
+            "picture": "./assets/cursosimages/montacargas.jpg",
+            "nombre": "Montacargas",
+            "descripcion": "INNOVAMOS LA CAPACITACIÓN Y EL ENTRENAMIENTO DE OPERADORES DE MONTACARGAS",
+            "price": "1900",
+            "liked": true
+        },
+        {
+            "id": 2,
+            "slug": "4-guests-2-bedrooms-powell-street-san-francisco",
+            "picture": "./assets/cursosimages/legos.png",
+            "nombre": "Liderazgo bloque a bloque",
+            "descripcion": "Potencia las principales habilidades blandas que todo líder debe ejercer, lo que le permitirá desarrollar una posición responsable sobre sus compromisos y los de su equipo de trabajo",
+            "price": "1900",
+            "liked": true
+        },
+        {
+            "id": 3,
+            "slug": "4-guests-2-bedrooms-powell-street-san-francisco",
+            "picture": "./assets/cursosimages/Desarrollo-humano.jpg",
+            "nombre": "Desarrollo humano",
+            "descripcion": "La metodología que revolucionará los cursos de desarrollo humano.  Vive una experiencia de aprendizaje acelerado y duradero",
+            "price": "1900",
+            "liked": true
+        }
+    ]
+}

@@ -23,6 +23,11 @@ import { Firestore, FirestoreModule, provideFirestore } from '@angular/fire/fire
 
 import { RouterModule, Routes } from '@angular/router';
 import { provideFirebaseApp } from '@angular/fire/app';
+import { BrowserswipeComponent } from './browserswipe/browserswipe.component';
+import { SwiperModule } from 'swiper/angular';
+import { CursoscategoriesComponent } from './cursos/cursoscategories/cursoscategories.component';
+import { CursoslistComponent } from './cursos/cursoslist/cursoslist.component';
+import { CursovidsComponent } from './cursos/cursovids/cursovids.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -30,7 +35,10 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ManualesPageComponent],
+  declarations: [AppComponent, ManualesPageComponent,
+
+    BrowserswipeComponent, CursoscategoriesComponent, CursoslistComponent, CursovidsComponent
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule,
@@ -42,7 +50,10 @@ export function createTranslateLoader(http: HttpClient) {
 
     FormsModule,
     FirestoreModule,
-    
+
+    SwiperModule,
+
+
 
 
 
@@ -57,7 +68,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
 
-   
+
 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
@@ -78,7 +89,7 @@ export function createTranslateLoader(http: HttpClient) {
       deps: [PLATFORM_ID, [new Optional(), RESPONSE]],
       multi: true
     },
-    
+
   ],
   bootstrap: [AppComponent]
 })

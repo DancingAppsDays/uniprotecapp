@@ -1,7 +1,11 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
+import path from 'path';
+import { CursoslistComponent } from '../cursos/cursoslist/cursoslist.component';
+import { CursovidsComponent } from '../cursos/cursovids/cursovids.component';
+import { BrowserswipeComponent } from '../browserswipe/browserswipe.component';
 
 const routes: Routes = [
   {
@@ -11,9 +15,28 @@ const routes: Routes = [
       // /app/ redirect
       {
         path: '',
-        redirectTo: 'categories',
+        redirectTo: 'novedades',
         pathMatch: 'full'
       },
+      {
+        path: 'novedades',
+        component: BrowserswipeComponent
+      },
+      {
+        path: 'cursos',
+        children: [
+          {
+            path: 'lista',
+            component: CursoslistComponent
+          },
+          {
+            path: 'videos',
+            component: CursovidsComponent
+          },
+
+
+        ]
+      },/*
       {
         path: 'categories',
         children: [
@@ -62,7 +85,7 @@ const routes: Routes = [
             loadChildren: () => import('../real-estate/details/real-estate-details.module').then(m => m.RealEstateDetailsPageModule)
           }
         ]
-      },
+      },*/
       {
         path: 'user',
         children: [
@@ -94,6 +117,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
-  providers: [ ]
+  providers: []
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

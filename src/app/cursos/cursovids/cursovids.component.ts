@@ -1,33 +1,38 @@
-import { Component, OnInit, HostBinding, Inject, PLATFORM_ID } from '@angular/core';
-import { VideoPlaylistModel } from './video-playlist.model';
-import { VgApiService } from '@videogular/ngx-videogular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Share } from '@capacitor/share';
-import { switchMap } from 'rxjs/operators';
-import { isPlatformBrowser } from '@angular/common';
+import { VgApiService } from '@videogular/ngx-videogular/core';
+import { switchMap } from 'rxjs';
 
 @Component({
-  selector: 'app-video-playlist',
-  templateUrl: './video-playlist.page.html',
-  styleUrls: [
-    './styles/video-playlist.page.scss',
-    './styles/video-playlist.shell.scss'
-  ]
+  selector: 'app-cursovids',
+  templateUrl: './cursovids.component.html',
+  styleUrls: ['./cursovids.component.scss'],
 })
-export class VideoPlaylistPage implements OnInit {
+export class CursovidsComponent implements OnInit {
+
   ssr = true;
+  video_playlist_model: any = {};// VideoPlaylistModel;
+  listing: any;
   start_playing = false;
   api: VgApiService;
-  video_playlist_model: VideoPlaylistModel;
 
-  @HostBinding('class.is-shell') get isShell() {
-    return (this.video_playlist_model && this.video_playlist_model.isShell) ? true : false;
-  }
-
-  constructor(
-    private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private http: HttpClient,
     @Inject(PLATFORM_ID) private platformId: object
   ) { }
+
+  loadJson(): void {
+    this.http.get('../../../assets/sample-data/cursosvideo.json').subscribe(data => {
+      this.listing = data;
+      console.log(this.listing); // For debugging purposes
+      console.log(this.listing.videos)
+
+      this.video_playlist_model.video_playlist = this.listing.videos;
+      this.video_playlist_model.selected_video = this.listing.videos[0];
+    });
+  }
 
   ngOnInit(): void {
     // In SSR show a placeholder for the <vg-player>
@@ -35,7 +40,7 @@ export class VideoPlaylistPage implements OnInit {
       this.ssr = false;
       console.log("Browser video player")
     }
-
+    /*
     this.route.data
       .pipe(
         // Extract data for this page
@@ -51,6 +56,15 @@ export class VideoPlaylistPage implements OnInit {
         },
         error: (error) => console.log(error)
       });
+    //console.log(this.video_playlist_model);
+    // console.log(this.video_playlist_model.video_playlist);
+    */
+
+    this.loadJson();
+
+
+
+
   }
 
   playMedia(media) {
@@ -75,7 +89,7 @@ export class VideoPlaylistPage implements OnInit {
     }
   }
 
-  shareMedia() {
+  shareMedia() {/*
     const selectedVideo = this.video_playlist_model.selected_video;
     Share.share({
       title: selectedVideo.title,
@@ -83,7 +97,9 @@ export class VideoPlaylistPage implements OnInit {
       url: 'https://ionicthemes.com/',
       dialogTitle: 'Share Media'
     })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+  }*/
+
   }
 }

@@ -1,0 +1,603 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="skip-walkthrough-button" fill="clear">skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- First Swiper Row -->
+  <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)" (init)="swiperInit()"
+    (slideChangeTransitionStart)="slideWillChange()">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 1">
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 2">
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 3">
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </swiper>
+
+  <!-- Second Swiper Row -->
+  <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)" (init)="swiperInit()"
+    (slideChangeTransitionStart)="slideWillChange()">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 4">
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 5">
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="swiper-slide">
+        <ion-row class="slide-inner-row">
+          <ion-col>
+            <img src="https://via.placeholder.com/300x150" alt="Image 6">
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </swiper>
+
+  <!-- Add more Swiper rows as needed -->
+
+
+  <div class="info-wrapper">
+    <h3 class="info-title">Categoria 1</h3>
+    <p class="info-paragraph">
+      Noticias
+    </p>
+  </div>
+
+  <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)" (init)="swiperInit()"
+    (slideChangeTransitionStart)="slideWillChange()">
+
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:300, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:300, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:300, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:200, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:200, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+
+    <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+      <ion-col class="illustration-col">
+        <app-aspect-ratio [ratio]="{w:200, h:150}">
+          <app-image-shell class="illustration-image" animation="spinner"
+            [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+            [alt]="'walkthrough'"></app-image-shell>
+        </app-aspect-ratio>
+
+
+
+        <div class="info-wrapper">
+          <h3 class="info-title">This App is built with Ionic 6</h3>
+          <p class="info-paragraph">
+            Curso 1 <b>Seguridad NOM 007</b> Montacargas
+          </p>
+
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <!--- 
+    
+    
+    
+    -->
+  </swiper>
+
+
+
+  <div class="info-wrapper">
+    <h3 class="info-title">Categoria 2</h3>
+    <p class="info-paragraph">
+      Noticias
+    </p>
+  </div>
+  <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)" (init)="swiperInit()"
+    (slideChangeTransitionStart)="slideWillChange()">
+
+
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:300, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:300, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:300, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:200, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:200, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+    <ng-template swiperSlide>
+      <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+        <ion-col class="illustration-col">
+          <app-aspect-ratio [ratio]="{w:200, h:150}">
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+          </app-aspect-ratio>
+
+
+
+          <div class="info-wrapper">
+            <h3 class="info-title">This App is built with Ionic 6</h3>
+            <p class="info-paragraph">
+              Curso 1 <b>Seguridad NOM 007</b> Montacargas
+            </p>
+
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-template>
+    <!--- 
+    
+    
+    
+    -->
+  </swiper>
+
+
+
+  <div class="info-wrapper">
+    <h3 class="info-title">Categoria 1</h3>
+    <p class="info-paragraph">
+      Noticias
+    </p>
+  </div>
+
+
+
+
+  <div class="swiper-container">
+    <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)"
+      (init)="swiperInit()" (slideChangeTransitionStart)="slideWillChange()">
+
+
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+            <app-aspect-ratio [ratio]="{w:300, h:150}">
+              <app-image-shell class="illustration-image" animation="spinner"
+                [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+                [alt]="'walkthrough'"></app-image-shell>
+            </app-aspect-ratio>
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+            <app-aspect-ratio [ratio]="{w:300, h:150}">
+              <app-image-shell class="illustration-image" animation="spinner"
+                [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+                [alt]="'walkthrough'"></app-image-shell>
+            </app-aspect-ratio>
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+            <app-aspect-ratio [ratio]="{w:300, h:150}">
+              <app-image-shell class="illustration-image" animation="spinner"
+                [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+                [alt]="'walkthrough'"></app-image-shell>
+            </app-aspect-ratio>
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+            <app-aspect-ratio [ratio]="{w:200, h:150}">
+              <app-image-shell class="illustration-image" animation="spinner"
+                [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+                [alt]="'walkthrough'"></app-image-shell>
+            </app-aspect-ratio>
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+            <app-aspect-ratio [ratio]="{w:200, h:150}">
+              <app-image-shell class="illustration-image" animation="spinner"
+                [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+                [alt]="'walkthrough'"></app-image-shell>
+            </app-aspect-ratio>
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+      <ng-template swiperSlide>
+        <ion-row class="slide-inner-row first-slide illustration-and-decoration-slide">
+          <ion-col class="illustration-col">
+
+            <app-image-shell class="illustration-image" animation="spinner"
+              [src]="'./assets/sample-images/walkthrough/walkthrough-illustration-1.svg'"
+              [alt]="'walkthrough'"></app-image-shell>
+
+
+
+
+            <div class="info-wrapper">
+              <h3 class="info-title">This App is built with Ionic 6</h3>
+              <p class="info-paragraph">
+                Curso 1 <b>Seguridad NOM 007</b> Montacargas
+              </p>
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ng-template>
+      <!--- 
+    
+    
+    
+    -->
+    </swiper>
+  </div>
+</ion-content>

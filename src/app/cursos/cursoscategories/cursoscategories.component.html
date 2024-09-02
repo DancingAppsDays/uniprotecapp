@@ -1,0 +1,51 @@
+<p>CURSO CAT EORKS</p>
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="skip-getting-started-button" fill="clear" [routerLink]="['/auth/login']">skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- We need the form wrapping the slides so all the inputs in the different slides are part of the same form -->
+  <form class="getting-started-form" [formGroup]="gettingStartedForm">
+
+    <ion-row class="browsing-categories-slide question-slide slide-inner-row">
+      <ion-col class="question-options-col" size="12">
+        <h2 class="slide-title">What are you browsing for?</h2>
+        <ion-list class="question-options-list">
+          <ion-radio-group formControlName="browsingCategory">
+            <ion-item class="question-option">
+              <ion-label>Woman</ion-label>
+              <ion-radio value="woman"></ion-radio>
+            </ion-item>
+            <ion-item class="question-option">
+              <ion-label>Men</ion-label>
+              <ion-radio value="men"></ion-radio>
+            </ion-item>
+            <ion-item class="question-option">
+              <ion-label>Kids</ion-label>
+              <ion-radio value="kids"></ion-radio>
+            </ion-item>
+            <ion-item class="question-option">
+              <ion-label>Petit</ion-label>
+              <ion-radio value="petit"></ion-radio>
+            </ion-item>
+            <ion-item class="question-option">
+              <ion-label>Plus Size</ion-label>
+              <ion-radio value="plus-size"></ion-radio>
+            </ion-item>
+            <ion-item class="question-option">
+              <ion-label>New In</ion-label>
+              <ion-radio value="new-in"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>
