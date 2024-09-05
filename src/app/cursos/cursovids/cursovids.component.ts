@@ -1,7 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Share } from '@capacitor/share';
 import { VgApiService } from '@videogular/ngx-videogular/core';
 import { switchMap } from 'rxjs';
@@ -20,13 +20,13 @@ export class CursovidsComponent implements OnInit {
   api: VgApiService;
 
   currentVideoUrl: string = "" //this.video_playlist_model.selected_video.youtube_url;
+  currentCourse: string = ""
 
-
-  constructor(private route: ActivatedRoute, private http: HttpClient,
+  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient,
     @Inject(PLATFORM_ID) private platformId: object
   ) { }
 
-  loadJson(): void {    //TODO: change this string depending on lista...
+  loadJson(): void {    //TODO: change this string depending on currentCurso...
     this.http.get('../../../assets/sample-data/cursosbrigadasvideo.json').subscribe(data => {
       this.listing = data;
       //console.log(this.listing); // For debugging purposes
@@ -44,6 +44,16 @@ export class CursovidsComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.ssr = false;
       console.log("Browser video player")
+    }
+   
+    // if (this.router.getCurrentNavigation()?.extras.state['itemslug']) {
+    // Accessing data passed via state and activatedroute
+    if (history.state.itemslug) {
+      this.currentCourse = history.state.itemslug;
+      console.log(this.currentCourse);
+    }else{
+      
+      console.log("Warning: no state passed")
     }
     /*
     this.route.data

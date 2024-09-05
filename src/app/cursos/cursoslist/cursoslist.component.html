@@ -12,7 +12,7 @@
 
     <ion-row class="image-row">
       <ion-col size="12">
-        <a class="image-anchor" [routerLink]="['/app/categories/real-estate/', item.slug]">
+        <a class="image-anchor" (click)="navigateToVideos(item.slug)">
           <app-image-shell [display]="'cover'" animation="spinner" class="item-picture" [src]="item.picture">
             <app-aspect-ratio [ratio]="{w:365, h:125}">
             </app-aspect-ratio>

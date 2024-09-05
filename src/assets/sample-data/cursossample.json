@@ -1,6 +1,15 @@
 {
     "cursos": [
         {
+            "id": 4,
+            "slug": "4-guests-2-bedrooms-powell-street-san-francisco",
+            "picture": "./assets/cursosthumbnails/brigadas_thumb_evac.png",
+            "nombre": "Brigadas de emergencia",
+            "descripcion": "Cómo actuar ante cualquier emergencia, poniendo tu seguridad ante todo",
+            "price": "1900",
+            "liked": true
+        },
+        {
             "id": 1,
             "slug": "4-guests-2-bedrooms-powell-street-san-francisco",
             "picture": "./assets/cursosimages/montacargas.jpg",
