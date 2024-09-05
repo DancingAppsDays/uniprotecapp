@@ -1,13 +1,24 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button class="skip-walkthrough-button" fill="clear">skip</ion-button>
-    </ion-buttons>
+
+
+<ion-content >
+  
+
+    <div class="gradient-background"></div>
+  <div class="title-container">
+    <img src="../../assets/cursosimages/UNIPROTEC-Logotipo_color.png" alt="Title Image" class="title-image">
+  </div>
+
+  <ion-toolbar class="filters-toolbar">
+    <ion-row class="searchbar-row" align-items-center>
+      <ion-col>
+        <ion-searchbar class="items-searchbar" animated [(ngModel)]="searchQuery" (ionChange)="searchList()"
+          placeholder="Filter by name..."></ion-searchbar>
+      </ion-col>
+
+    </ion-row>
+
   </ion-toolbar>
-</ion-header>
 
-
-<ion-content>
   <!-- First Swiper Row -->
   <swiper [config]="swiperConfig" class="walkthrough-slides" (swiper)="setSwiperInstance($event)" (init)="swiperInit()"
     (slideChangeTransitionStart)="slideWillChange()">
@@ -600,4 +611,5 @@
     -->
     </swiper>
   </div>
+
 </ion-content>

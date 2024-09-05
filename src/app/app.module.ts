@@ -28,6 +28,7 @@ import { SwiperModule } from 'swiper/angular';
 import { CursoscategoriesComponent } from './cursos/cursoscategories/cursoscategories.component';
 import { CursoslistComponent } from './cursos/cursoslist/cursoslist.component';
 import { CursovidsComponent } from './cursos/cursovids/cursovids.component';
+import { SafeUrlPipe } from './shared/safe-url.pipe';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -35,7 +36,10 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ManualesPageComponent,
+  declarations: [AppComponent,SafeUrlPipe,
+    
+    
+    ManualesPageComponent,
 
     BrowserswipeComponent, CursoscategoriesComponent, CursoslistComponent, CursovidsComponent
   ],

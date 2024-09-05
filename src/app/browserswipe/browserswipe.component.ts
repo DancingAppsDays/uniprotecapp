@@ -14,6 +14,7 @@ import { SwiperComponent } from 'swiper/angular';
 })
 export class BrowserswipeComponent implements OnInit {
 
+  searchQuery:any;
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +30,9 @@ export class BrowserswipeComponent implements OnInit {
   };
 
 
+  searchList(){
+
+  }
 
   public setSwiperInstance(swiper: SwiperCore): void {
     // console.log('setSwiperInstance');

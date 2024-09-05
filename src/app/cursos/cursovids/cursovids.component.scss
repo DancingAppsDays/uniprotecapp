@@ -1,11 +1,11 @@
-.responsive-iframe {
+.responsive-iframexxx {
     width: 100%;
     height: 100%;
     min-height: 360px;
     border: none;
 }
 
-.video-containers {
+.video-containersxx {
     flex: 0 0 80%;
     /* Take up 80% of the height */
     display: flex;
@@ -13,8 +13,215 @@
     align-items: center;
 }
 
-.video-playlist-contents {
+.video-playlist-contentsxx {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+//up unused
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.half-height {
+ 
+
+  height: 50%;  //400px; /* Adjust this value as needed */
+  //width: 100%;  //MAYBEEEEE
+  min-width: 40%;
+  height: 50%;
+  display: block;
+  margin: 0 auto; /* Center horizontally */ //doest do anything? because of parent element?
+
+  
+}
+
+//unused2
+
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 23vh; /* One third of the viewport height */
+  background: linear-gradient(to bottom, rgb(0, 102, 255), white);
+  z-index: -1; /* Ensure the gradient is behind the content */
+}
+
+
+
+
+
+.video-image-container {
+  min-width: 40%;
+  //height: 80%; /* Adjust this value as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Default height for wider devices */
+  height: 80%; /* Adjust this value as needed */
+
+  /* Media query for devices with width less than 350px */
+  @media (max-width: 350px) {
+    height: 30%; /* Adjust this value as needed */
+  }
+
+  /* Media query for devices with width between 351px and 420px */
+  @media (min-width: 351px) and (max-width: 420px) {
+    height: 38%; /* Adjust this value as needed */
+  }
+
+  /* Media query for devices with width between 421px and 600px */
+  @media (min-width: 421px) and (max-width: 600px) {
+    height: 50%; /* Adjust this value as needed */
+  }
+
+  /* Media query for devices with width between 601px and 800px */
+  @media (min-width: 601px) and (max-width: 800px) {
+    height: 65%; /* Adjust this value as needed */
+  }
+
+  /* Media query for devices with width greater than 800px */
+  @media (min-width: 801px) {
+    height: 80%; /* Adjust this value as needed */
+  }
+}
+
+.video-image {
+  background-position: center;
+  border-radius: 15px; /* Adjust the value as needed for roundness */
+  overflow: hidden; /* Ensure the content inside the element respects the border radius */
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 100%; /* Ensure the image takes the full height of the container */
+}
+
+
+
+
+// Custom variables
+// Note:  These ones were added by us and have nothing to do with Ionic CSS Custom Properties
+:host {
+    --page-margin: var(--app-fair-margin);
+    --page-background: var(--app-background);
+  }
+  
+  .video-playlist-content {
+    --background: var(--page-background);
+  
+    .ssr-video {
+      width: 100%;
+      height: 100%;
+    }
+  
+      .video-data-section {
+          padding: var(--page-margin);
+  
+          .video-title {
+              margin-top: 0px;
+        margin-bottom: calc(var(--page-margin) / 2);
+              color: var(--ion-color-secondary);
+          }
+  
+          .video-description {
+        margin: 0px;
+          font-size: 13px;
+            line-height: 1.3;
+              letter-spacing: 0.3px;
+              color: var(--ion-color-dark);
+          }
+      }
+  
+    .video-playlist-section	{
+      padding: 0px var(--page-margin);
+      padding-bottom: var(--page-margin);
+  
+      .playlist-item-row {
+        --ion-grid-column-padding: 0px;
+  
+        &:not(:first-child) {
+          padding-top: calc(var(--page-margin) / 2);
+          box-shadow: inset 0 -7px 5px -8px var(--ion-color-primary);
+
+        }
+  
+        &:not(:last-child) {
+          padding-bottom: calc(var(--page-margin) / 2);
+          // box-shadow at the bottom
+          box-shadow: inset 0 -7px 5px -8px var(--ion-color-primary);
+        }
+      }
+  
+      .play-icon-wrapper {
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .play-icon {
+          color: var(--ion-color-secondary);
+          background: rgba(var(--ion-color-lightest-rgb), .7);
+          font-size: 20px;
+          padding: 8px;
+          border-radius: 50%;
+        }
+      }
+  
+      .video-info-wrapper {
+        padding-inline-start: var(--page-margin);
+        align-self: center;
+  
+        .image-title {
+          margin: 0px;
+          margin-bottom: calc(var(--page-margin) / 4);
+          color: var(--ion-color-secondary);
+          font-size: 14px;
+  
+          app-text-shell {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+  
+        .image-description {
+          margin: 0px;
+          color: var(--ion-color-dark);
+          font-size: 13px;
+          line-height: 1.3;
+          letter-spacing: 0.3px;
+  
+          // line clamp https://css-tricks.com/line-clampin/#article-header-id-0
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          // we need autoprefixer off for next line https://github.com/postcss/autoprefixer/issues/776#issuecomment-445249174
+          /* autoprefixer: ignore next */
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+
+
+  app-image-shell.video-image {
+    background-position: center;
+    border-radius: 5%
+  }
+  
+  .image-title > app-text-shell {
+    --text-shell-line-height: 14px;
+  }
+  
+  .image-description > app-text-shell {
+    --text-shell-line-height: 13px;
+  }
+  
+  

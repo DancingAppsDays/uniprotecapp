@@ -13,14 +13,19 @@
 </ion-header>
 
 <ion-content class="video-playlist-content">
-  <app-aspect-ratio [ratio]="{w: 16, h: 9}" class="video-container">
+
+  <div class="gradient-background"></div>
+  
+
+
+  <!--<app-aspect-ratio [ratio]="{w: 16, h: 9}" class="video-container">-->
     <!-- SSR placeholder -->
     <video *ngIf="ssr" class="ssr-video" controls preload="auto">
       <source *ngFor="let video of video_playlist_model?.selected_video?.sources" [src]="video.src" [type]="video.type">
     </video>
 
-    <!-- In the Browser, show the <vg-player> -->
-    <vg-player *ngIf="!ssr" class="video-player" (onPlayerReady)="onPlayerReady($event)">
+    <!-- In the Browser, show the <vg-player> 
+    <vg-player *ngIf="!ssr" class="video-player" (onPlayerReady)="onPlayerReady($event)">-->
 
       <!--
       <video controls #player_video [vgMedia]="player_video" id="player-video" preload="auto">
@@ -28,16 +33,17 @@
           [type]="video.type">
       </video>-->
 
-      <iframe *ngIf="video_playlist_model?.selected_video?.youtube_url" src="https://www.youtube.com/embed/evT-E8LtsQo"
+      <div class="video-image-container">
+      <iframe *ngIf="video_playlist_model?.selected_video?.youtube_url" [src]="currentVideoUrl | safeUrl"
         id="player-video" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        class="responsive-iframe">
+        class="video-image">
       </iframe>
+    </div>
 
 
-
-    </vg-player>
-  </app-aspect-ratio>
+   <!-- </vg-player>
+  </app-aspect-ratio>-->
 
   <section class=" video-data-section">
     <h3 class="video-title">

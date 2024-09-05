@@ -1,15 +1,15 @@
 <ion-tabs (ionTabsDidChange)="ionTabsDidChange($event)">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="categories" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/categories']">
-      <ion-icon name="list-outline"></ion-icon>
+    <ion-tab-button tab="categories" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/browser']">
+      <ion-icon name="home-outline"></ion-icon>
       <ion-label class="tab-title">Novedades</ion-label>
     </ion-tab-button>
-    <ion-tab-button tab="user" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/user']">
-      <ion-icon name="person-outline"></ion-icon>
+    <ion-tab-button tab="user" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/lista']">
+      <ion-icon name="medal-outline"></ion-icon>
       <ion-label class="tab-title">Cursos</ion-label>
     </ion-tab-button>
-    <ion-tab-button tab="notifications" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/notifications']">
-      <ion-icon name="notifications-outline"></ion-icon>
+    <ion-tab-button tab="notifications" [routerLinkActive]="['tab-selected']" [routerLink]="['/app/notfound']">
+      <ion-icon name="reader-outline"></ion-icon>
       <ion-label class="tab-title">Documentaciones</ion-label>
     </ion-tab-button>
   </ion-tab-bar>

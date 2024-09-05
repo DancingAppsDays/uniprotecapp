@@ -1,0 +1,60 @@
+{
+    "videos": [
+        {
+            "title": "Tutorial brigadas",
+            "description": "Nuestra dinámica de videos y descargables te presentará un panorama claro de cómo actuar ante cualquier emergencia, poniendo tu seguridad ante todo.",
+            "thumbnail": "./assets/cursosthumbnails/brigadas_thumb_tut.png",
+            "youtube_url": "https://www.youtube.com/embed/RDotKidgXlE",
+            "sources": [
+                {
+                    "src": "https://www.youtube.com/embed/evT-E8LtsQo?si=sY5jYs5eIwEg-WaN",
+                    "type": "video/mp4"
+                }
+            ]
+        },
+        {
+            "title": "Brigadas evacuacion inmuebles",
+            "description": "Capacitar al personal con los conocimientos básicos que les permitan actuar con serenidad y eficiencia en caso de evacuación o repliegue de instalaciones.",
+            "thumbnail": "./assets/cursosthumbnails/brigadas_thumb_evac.png",
+            "youtube_url": "https://www.youtube.com/embed/zH0afx2_Z5c",
+            "sources": [
+                {
+                    "src": "https://www.youtube.com/embed/evT-E8LtsQo",
+                    "type": "video/mp4"
+                },
+                {
+                    "src": "https://www.youtube.com/watch?v=q5oqTwCwYQ0",
+                    "type": "video/ogg"
+                },
+                {
+                    "src": "https://www.youtube.com/watch?v=q5oqTwCwYQ0",
+                    "type": "video/webm"
+                }
+            ]
+        },
+        {
+            "title": "Combate contra incendios",
+            "description": "Establecer los requerimientos para la prevención y protección contra incendios en los centros de trabajo.",
+            "thumbnail": "./assets/cursosthumbnails/brigadas_thumb_incendio.png",
+            "youtube_url": "https://www.youtube.com/embed/fkhS5iA0TBk",
+            "sources": [
+                {
+                    "src": "https://www.youtube.com/embed/evT-E8LtsQo?si=sY5jYs5eIwEg-WaN",
+                    "type": "video/mp4"
+                }
+            ]
+        },
+        {
+            "title": "Primeros auxilios",
+            "description": "Capacita y genera personal con habilidades y soporte teórico práctico para desempeñarse como primer respondiente ante situaciones de primeros auxilios.",
+            "thumbnail": "./assets/cursosthumbnails/brigadas_thumb_auxilio.png",
+            "youtube_url": "https://www.youtube.com/embed/gbmd4_hFeto",
+            "sources": [
+                {
+                    "src": "https://www.youtube.com/embed/evT-E8LtsQo?si=sY5jYs5eIwEg-WaN",
+                    "type": "video/mp4"
+                }
+            ]
+        }
+    ]
+}

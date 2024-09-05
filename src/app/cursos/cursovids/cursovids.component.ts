@@ -19,18 +19,23 @@ export class CursovidsComponent implements OnInit {
   start_playing = false;
   api: VgApiService;
 
+  currentVideoUrl: string = "" //this.video_playlist_model.selected_video.youtube_url;
+
+
   constructor(private route: ActivatedRoute, private http: HttpClient,
     @Inject(PLATFORM_ID) private platformId: object
   ) { }
 
-  loadJson(): void {
-    this.http.get('../../../assets/sample-data/cursosvideo.json').subscribe(data => {
+  loadJson(): void {    //TODO: change this string depending on lista...
+    this.http.get('../../../assets/sample-data/cursosbrigadasvideo.json').subscribe(data => {
       this.listing = data;
-      console.log(this.listing); // For debugging purposes
-      console.log(this.listing.videos)
+      //console.log(this.listing); // For debugging purposes
+      //console.log(this.listing.videos)
 
       this.video_playlist_model.video_playlist = this.listing.videos;
       this.video_playlist_model.selected_video = this.listing.videos[0];
+
+      this.changevideo(this.video_playlist_model.selected_video.youtube_url)
     });
   }
 
@@ -72,8 +77,19 @@ export class CursovidsComponent implements OnInit {
     if (media !== this.video_playlist_model.selected_video) {
       // Change sources
       this.video_playlist_model.selected_video = media;
+    
       // When changing sources we wait until the metadata is loaded and then we start playing the video
+
+
+      //youtube implementation
+     // console.log(this.video_playlist_model.selected_video)
+     // console.log(this.video_playlist_model.selected_video.youtube_url)
+      this.changevideo(this.video_playlist_model.selected_video.youtube_url)
     }
+  }
+
+  changevideo(videourl){
+    this.currentVideoUrl = videourl
   }
 
   onPlayerReady(api: VgApiService) {
