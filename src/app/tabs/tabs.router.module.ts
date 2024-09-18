@@ -15,7 +15,7 @@ const routes: Routes = [
       // /app/ redirect
       {
         path: '',
-        redirectTo: 'novedades',
+        redirectTo: 'cursos',
         pathMatch: 'full'
       },
       {
@@ -32,6 +32,13 @@ const routes: Routes = [
           {
             path: 'videos',
             component: CursovidsComponent
+          },
+          {
+            
+              path: '',
+              redirectTo: 'lista',
+              pathMatch: 'full'
+            
           },
 
 

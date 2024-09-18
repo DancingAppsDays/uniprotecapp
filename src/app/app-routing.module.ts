@@ -30,8 +30,10 @@ const routes: Routes = [
   },
   {
     path: '',
-
-    component: BrowserswipeComponent
+    redirectTo: 'app',
+     pathMatch: 'full'
+      
+    //component: CursoslistComponent//
   },
 
   /*{
