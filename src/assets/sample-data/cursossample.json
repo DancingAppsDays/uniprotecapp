@@ -7,7 +7,12 @@
             "nombre": "Brigadas de emergencia",
             "descripcion": "Cómo actuar ante cualquier emergencia, poniendo tu seguridad ante todo",
             "price": "1900",
-            "liked": true
+            "liked": true,
+            "category": "brigadas",
+            "tags": [
+                "seguridad",
+                "emergencia"
+            ]
         },
         {
             "id": 1,
@@ -16,7 +21,12 @@
             "nombre": "Montacargas",
             "descripcion": "INNOVAMOS LA CAPACITACIÓN Y EL ENTRENAMIENTO DE OPERADORES DE MONTACARGAS",
             "price": "1900",
-            "liked": true
+            "liked": true,
+            "category": "seguridad",
+            "tags": [
+                "seguridad",
+                "emergencia"
+            ]
         },
         {
             "id": 2,
@@ -25,7 +35,12 @@
             "nombre": "Liderazgo bloque a bloque",
             "descripcion": "Potencia las principales habilidades blandas que todo líder debe ejercer, lo que le permitirá desarrollar una posición responsable sobre sus compromisos y los de su equipo de trabajo",
             "price": "1900",
-            "liked": true
+            "liked": true,
+            "category": "liderazgo",
+            "tags": [
+                "liderazgo",
+                "habilidades blandas"
+            ]
         },
         {
             "id": 3,
@@ -34,7 +49,12 @@
             "nombre": "Desarrollo humano",
             "descripcion": "La metodología que revolucionará los cursos de desarrollo humano.  Vive una experiencia de aprendizaje acelerado y duradero",
             "price": "1900",
-            "liked": true
+            "liked": true,
+            "category": "liderazgo",
+            "tags": [
+                "liderazgo",
+                "habilidades blandas"
+            ]
         }
     ]
 }

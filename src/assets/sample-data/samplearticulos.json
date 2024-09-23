@@ -1,0 +1,24 @@
+{
+    "articulos": [
+        {
+            "nombre": "Plan de Evacuación en Emergencias",
+            "subtitulo": "Preparación y Respuesta",
+            "contenido": "Un plan de evacuación efectivo es crucial para garantizar la seguridad de todos durante una emergencia. Conozca los pasos esenciales para crear y ejecutar un plan de evacuación en su lugar de trabajo o residencia."
+        },
+        {
+            "nombre": "Uso de Extintores de Incendio",
+            "subtitulo": "Guía Práctica",
+            "contenido": "Aprenda a utilizar correctamente los extintores de incendio para combatir pequeños fuegos. Esta guía práctica le enseñará los tipos de extintores y las técnicas adecuadas para su uso seguro."
+        },
+        {
+            "nombre": "Formación de Brigadas de Emergencia",
+            "subtitulo": "Capacitación y Roles",
+            "contenido": "Las brigadas de emergencia son equipos entrenados para actuar rápidamente en situaciones críticas. Descubra cómo formar y capacitar a su brigada de emergencia para mejorar la respuesta ante incidentes."
+        },
+        {
+            "nombre": "Seguridad en el Trabajo",
+            "subtitulo": "Prevención de Accidentes",
+            "contenido": "La seguridad en el trabajo es fundamental para prevenir accidentes y lesiones. Conozca las mejores prácticas y medidas preventivas que pueden implementarse para crear un entorno laboral seguro."
+        }
+    ]
+}
