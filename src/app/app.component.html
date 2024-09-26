@@ -21,42 +21,29 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
+       
+
         <ion-list>
           <ion-list-header>
             <ion-label>Navegacion</ion-label>
           </ion-list-header>
-          <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item [routerLink]="p.url">
-              <ion-icon slot="start" [name]="p.ionicIcon? p.ionicIcon: ''"
-                [src]="p.customIcon? p.customIcon: ''"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list><!-- -->
-
-        <ion-list>
-          <ion-list-header>
-            <ion-label>Showcase</ion-label>
-          </ion-list-header>
           <ion-menu-toggle autoHide="true">
-            <ion-item [routerLink]="['/showcase/app-shell']">
-              <ion-icon slot="start" name="egg-outline"></ion-icon>
+            <ion-item [routerLink]="['/app/cursos']">
+              <ion-icon slot="start" name="home-outline"></ion-icon>
               <ion-label>
-                App Shell
+                Novedades
               </ion-label>
             </ion-item>
-            <ion-item [routerLink]="['/showcase/route-resolvers-ux']">
-              <ion-icon slot="start" name="cog-outline"></ion-icon>
+            <ion-item [routerLink]="['/app/cursos']">
+              <ion-icon slot="start" name="medal-outline"></ion-icon>
               <ion-label>
-                Route Resolvers UX
+                Cursos
               </ion-label>
             </ion-item>
-            <ion-item [routerLink]="['/showcase/custom-components']">
-              <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+            <ion-item [routerLink]="['/app/cursos/videos']">
+              <ion-icon slot="start" name="reader-outline"></ion-icon>
               <ion-label>
-                Custom Components
+                Documentacion
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
